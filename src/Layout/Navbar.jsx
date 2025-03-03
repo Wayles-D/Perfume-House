@@ -2,7 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import navLogo from "../assets/Navlogo.svg"
 import AuthBtn from '../Auth/AuthBtn';
-import menuImg from "../assets/menuImg.png"
+import menuImg from "../assets/MenuImg.png"
 
 const Navbar = () => {
   return (
