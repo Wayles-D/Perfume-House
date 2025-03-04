@@ -10,7 +10,7 @@ const Home = () => {
         <Products/>
        </section>
 
-       <section>
+       <section className='container mx-auto mt-10'>
         <Cart/>    
        </section> 
     </main>

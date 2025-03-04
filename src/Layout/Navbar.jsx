@@ -21,7 +21,15 @@ const Navbar = () => {
             </div>
             {/* div for menu / hamburger img */}
             <div className='md:hidden'>
-                <img src={menuImg} alt="menu-img" />
+            <div className="dropdown dropdown-end">
+  <div tabIndex={0} role="button" className="">
+    <img src={menuImg} alt="menu-img" />
+    {/* Click  ⬇ */}
+    </div>
+  <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-70 p-4 shadow-sm">
+    <AuthBtn /> 
+  </ul>
+</div>
             </div>
         </div>   
     </nav>

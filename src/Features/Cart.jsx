@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { productDetails } from "../JavascriptFolders/Carts"; 
-import OrderConfirmation from "./OrderConfirmation"; // Import modal component
-
+import OrderConfirmation from "./OrderConfirmation"; 
 const CartItem = ({ item }) => {
   return (
     <div className="flex items-center gap-4 pb-4">
@@ -23,7 +22,7 @@ const CartItem = ({ item }) => {
 };
 
 const Cart = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false); // ✅ Added useState properly
+  const [isModalOpen, setIsModalOpen] = useState(false); 
 
   const cartItems = productDetails.filter((item) => item.quantity > 0); 
   const subTotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -50,7 +49,7 @@ const Cart = () => {
           <span>₦{total.toLocaleString()}</span>
         </div>
 
-        {/* ✅ Fixed: Now the button opens the modal */}
+        
         <button
           className="bg-purple-500 text-white font-bold text-center w-full py-2 rounded-lg mt-4 cursor-pointer"
           onClick={() => setIsModalOpen(true)}
@@ -59,7 +58,6 @@ const Cart = () => {
         </button>
       </div>
 
-      {/* ✅ Modal appears when isModalOpen is true */}
       {isModalOpen && <OrderConfirmation onClose={() => setIsModalOpen(false)} />}
     </div>
   );
