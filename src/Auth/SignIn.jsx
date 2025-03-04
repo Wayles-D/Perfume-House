@@ -27,7 +27,7 @@ const SignIn = () => {
               <div>
                 <h2 className="pb-1">Email</h2>
                 <input
-                  className="w-100 p-2 sm:w-"
+                  className="w-100 p-2"
                   type="email"
                   name=""
                   id=""
@@ -38,6 +38,7 @@ const SignIn = () => {
               </div>
             </div>
             <div className="py-3">
+            <div>
               <h2 className="pb-1">Password</h2>
               <input
                 className="w-full p-2"
@@ -48,11 +49,15 @@ const SignIn = () => {
                 {...register("password")}
               />
               <p className="text-red-600">{errors.password?.message}</p>
-              <input type="checkbox" id="remember" className="accent-primary" />
+              <div className="flex">
+              <input type="checkbox" id="remember" className="accent-primary " />
+              <div className="flex">
               <label htmlFor="">Remember me</label>
-              <p className="ml-70 mb-8 text-red-600">Forgot password</p>
+              <p className="ml-40 text-red-600">Forgot password</p>
+              </div>
+              </div>
             </div>
-            <div></div>
+            </div>
             <button className="btn btn-primary w-full">Sign In</button>
             <div className="divider">or</div>
             <button className="w-full btn bg-white text-black border-black">
@@ -85,6 +90,7 @@ const SignIn = () => {
               </svg>
               Continue with Google
             </button>
+            <h6 className="text-center text-[10px] mt-2">Don't have an account? <span className="text-primary">Sign Up</span></h6>
           </form>
         </div>
               
